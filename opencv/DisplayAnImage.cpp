@@ -2,7 +2,7 @@
 
 int main()
 {
-	cv::Mat img = cv::imread("/home/shushan/Downloads/the-image-cicada.png");
+	cv::Mat img = cv::imread("/path/image.png");
 	cv::imshow("Image", img);
 	
 	cv::waitKey(0);
