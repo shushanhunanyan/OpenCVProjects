@@ -94,3 +94,26 @@ private:
     cv::Mat m_image;
 };
 
+
+
+int main()
+{
+  
+     ImageManipulation img("/home/shushan/Downloads/the-image-cicada.png");
+
+    
+    if (!img.img_load()) {
+        return -1;
+    }
+    img.img_crop(200, 200, 200, 200);
+    img.img_resize(200, 200);
+    img.img_rotate(-45);
+    img.img_flip(-1);
+    img.img_display("Resized Image");
+    img.img_save("/home/shushan/Downloads/rotated_image.png");
+
+    img.waitForKeyPress();
+
+    return 0;
+}
+
